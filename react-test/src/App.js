@@ -1,41 +1,25 @@
 import './App.css';
 
-
-import users from './assets/Mock-users.js'
-import UserCard from './Components/UserCard/index.js'
-
+import products from './assets/mock-product';
+import List from './Components/Lists'
 
 function App() {
-  console.log(users)
-  const testUser = {
-    gender: 'female',
-    name: {
-      title: 'Ms',
-      first: 'Denise',
-      last: 'Newman'
-    },
-    dob: {
-      date: '1945-12-31T14:50:01.922Z',
-      age: 76
-    },
-    picture: {
-      large: 'https://randomuser.me/api/portraits/women/84.jpg',
-      medium: 'https://randomuser.me/api/portraits/med/women/84.jpg',
-      thumbnail: 'https://randomuser.me/api/portraits/thumb/women/84.jpg'
+  const testProduct = {
+    id: 20,
+    title: 'DANVOUY Womens T Shirt Casual Cotton Short',
+    price: 12.99,
+    description:
+      '95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.',
+    category: "women's clothing",
+    image: 'https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg',
+    rating: {
+      rate: 3.6,
+      count: 145
     }
   }
   return (
     <div className='App'>
-
-      <div className="d-flex gap-3 flex-wrap">
-        {
-          users.map((user, index) => <UserCard cardData={user}/>)
-        }
-        
-        
-        
-
-      </div>
+      <List data={products}/>
 
     </div>
 
